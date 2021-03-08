@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.skip_next),
         onPressed: () async {
-          Meme meme = await getIt.get<MemeDomainController>().getNextMeme();
+          Meme meme = await getIt<MemeDomainController>().getNextMeme();
           setState(() {
             visibleMeme = meme;
           });         // locator<MyService>().myServiceMethod;
